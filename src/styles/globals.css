@@ -66,3 +66,18 @@
   }
 }
 
+.settings-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.settings-button button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+

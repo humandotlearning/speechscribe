@@ -152,20 +152,21 @@ export default function SpeechToTextUI() {
         "bg-gray-50 dark:bg-gray-900",
       )}
     >
-      <Card className="w-full max-w-2xl shadow-lg border-0 overflow-hidden bg-white dark:bg-gray-800">
-        <CardContent className="p-6">
+      <Card className="w-full max-w-2xl h-auto min-h-[500px] flex flex-col shadow-lg border-0 overflow-hidden bg-white dark:bg-gray-800">
+        <CardContent className="p-6 flex-1 flex flex-col">
           <div className="flex justify-between items-center mb-8">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Speech to Text</h1>
             <DarkModeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
           </div>
 
-          <AudioVisualizer isListening={isListening} setupAudio={setupAudio} />
+          <div className="flex-1 flex flex-col">
+            <AudioVisualizer isListening={isListening} setupAudio={setupAudio} />
 
-          <TranscriptDisplay isListening={isListening} transcriptParts={transcriptParts} />
+            <TranscriptDisplay isListening={isListening} transcriptParts={transcriptParts} />
+          </div>
 
           <div className="flex justify-between items-center">
             <ControlButtons transcript={transcript} clearTranscript={clearTranscript} copyTranscript={copyTranscript} />
-
             <MicrophoneButton isListening={isListening} toggleListening={toggleListening} />
           </div>
         </CardContent>
