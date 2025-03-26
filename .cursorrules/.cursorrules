@@ -1,0 +1,2 @@
+1. it is a speech to text project to make it easy for anyone to transcribe speech
+2. it is built using tauri with react based frontend and rust based backend. 
